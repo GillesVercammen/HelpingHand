@@ -1,1 +1,18 @@
 /* Empty. Add your own CSS if you like */
+/*
+COlORS:
+1: #66a5ad
+2: #ba5536
+3: #a43820
+*/
+.bar-stable {
+    background-color: #a43820 !important;
+    color:white;
+}
+.bar.bar-stable .title{
+    color:white;
+}
+
+.bar-stable .button.button-clear {
+    color: white;
+}

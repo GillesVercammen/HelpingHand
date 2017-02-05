@@ -5,7 +5,26 @@ COlORS:
 2: #ba5536
 3: #a43820
 */
+/*
+ADD FONT AWESOME
+*/
+
+@font-face {
+    font-family: 'fontawesome';
+    src:url('../fonts/fontawesome-webfont.eot');
+    src:url('../fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+        url('../fonts/fontawesome-webfont.woff') format('woff'),
+        url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('../fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+TOP HEADER
+*/
 .bar-stable {
+    border-color: #a43820 !important;
     background-color: #a43820 !important;
     color:white;
 }
@@ -16,3 +35,123 @@ COlORS:
 .bar-stable .button.button-clear {
     color: white;
 }
+
+/*
+DICE 
+*/
+#dice {
+    background: url("../img/dice_bg.jpg") no-repeat;  
+    background-position: center; 
+    background-size: cover;
+}
+#roll-wrap {
+perspective: 800;
+perspective-origin: 50% 200px;
+}
+#addDie1, #addDie2{
+width: 50%;
+}
+#addDie2 {
+    float:right;
+}
+#play {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 0px auto;
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  background-color: #2ecc71;
+  color: #ecf0f1; 
+  transition: background-color .3s;
+}
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn.orange {
+  background-color: #e67e22;
+}
+
+.btn.orange:hover, .btn.orange:focus {
+  background-color: #d35400;
+}
+
+.btn.red {
+  background-color: #e74c3c;
+}
+
+.btn.red:hover, .btn.red:focus {
+  background-color: #c0392b;
+}
+
+#die {
+  position: relative;
+  margin: 40px auto 0;
+  height: 400px;
+  width: 90%;
+  transition: transform 1.5s linear;
+  transform-style: preserve-3d;
+}
+#die2 {
+  position: relative;
+  margin: -400px auto 0;
+  height: 400px;
+  width: 90%;
+  transition: transform 1.5s linear;
+  transform-style: preserve-3d;
+
+}
+#die3 {
+  position: relative;
+  margin: -400px auto 0;
+  height: 400px;
+  width: 90%;
+  transition: transform 1.5s linear;
+  transform-style: preserve-3d;
+
+}
+.sf {
+  position: absolute;
+  height: 62px;
+  width: 62px;
+  padding: 20px;
+  background-color:white;;
+  font-size: 30px;
+  color: black;;
+  border: 1px solid white;
+  border-radius: 3px;
+  text-align: center;
+
+}
+/* TranslateZ = hoever elk vlak vaneen moet staan. rotateX waar het moet staan */
+#die .f1, #die2 .f1, #die3 .f1  {
+  transform: rotateX(90deg) translateZ(30px);
+}
+#die .f2, #die2 .f2, #die3 .f2  {
+  transform: translateZ(30px);
+}
+#die .f3, #die2 .f3, #die3 .f1 {
+  transform: rotateY(90deg) translateZ(30px);
+}
+#die .f4, #die2 .f4, #die3 .f4 {
+  transform: rotateY(180deg) translateZ(30px);
+}
+#die .f5, #die2 .f5, #die3 .f5 {
+  transform: rotateY(-90deg) translateZ(30px);
+}
+#die .f6, #die2 .f6, #die3 .f6 {
+  transform: rotateX(-90deg) rotate(180deg) translateZ(30px);
+}
+

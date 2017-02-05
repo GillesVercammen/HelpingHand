@@ -3,7 +3,36 @@
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
-  <ion-content id="dice" scroll="true">
-  dice
-  </ion-content>
+    <ion-content id="dice" scroll="true">
+ 
+             <button class="btn orange" id="addDie1" type="button"><span>Add second die</span></button>
+             <button class="btn red" id="addDie2" type="button"><span>Add third die</span></button>    
+        <section id="roll-wrap">
+<div id="die" style="transform: rotateX(0deg) rotateY(0deg);">
+    <div class="sf f1">1</div>
+    <div class="sf f2">2</div>
+    <div class="sf f3">3</div>
+    <div class="sf f4">4</div>
+    <div class="sf f5">5</div>
+    <div class="sf f6">6</div>
+</div>
+<div id="die2" style="transform: rotateX(0deg) rotateY(90deg);">
+    <div class="sf f1">1</div>
+    <div class="sf f2">2</div>
+    <div class="sf f3">3</div>
+    <div class="sf f4">4</div>
+    <div class="sf f5">5</div>
+    <div class="sf f6">6</div>
+</div>
+<div id="die3" style="transform: rotateX(0deg) rotateY(180deg);">
+    <div class="sf f1">1</div>
+    <div class="sf f2">2</div>
+    <div class="sf f3">3</div>
+    <div class="sf f4">4</div>
+    <div class="sf f5">5</div>
+    <div class="sf f6">6</div>
+</div>
+</section>
+<button class="btn orange" id="play" type="button"><span>Roll it</span></button>
+    </ion-content>
 </ion-view>

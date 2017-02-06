@@ -48,18 +48,17 @@ DICE
 perspective: 800;
 perspective-origin: 50% 200px;
 }
-#addDie1, #addDie2{
-width: 50%;
-}
-#addDie2 {
+#addDie2, #removeDie2 {
     float:right;
 }
-#play {
+#roll {
     width: 50%;
     margin-left: 25%;
     margin-top: 10px;
 }
 .btn {
+  width: 50%;
+  min-height: 50px;
   position: relative;
   display: inline-block;
   margin: 0px auto;
@@ -111,6 +110,7 @@ width: 50%;
   width: 90%;
   transition: transform 1.5s linear;
   transform-style: preserve-3d;
+  display: none;
 
 }
 #die3 {
@@ -120,7 +120,7 @@ width: 50%;
   width: 90%;
   transition: transform 1.5s linear;
   transform-style: preserve-3d;
-
+  display: none;          
 }
 .sf {
   position: absolute;

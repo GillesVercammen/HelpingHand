@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ionic.wheel','starter.controllers'])
+angular.module('starter', ['ionic', 'ionic.wheel','starter.controllers','ngStorage'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

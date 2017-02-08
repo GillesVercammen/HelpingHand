@@ -94,7 +94,6 @@ perspective-origin: 50% 200px;
 .btn.red:hover, .btn.red:focus {
   background-color: #c0392b;
 }
-
 #die {
   position: relative;
   margin: 40px auto 0;
@@ -122,6 +121,37 @@ perspective-origin: 50% 200px;
   transform-style: preserve-3d;
   display: none;          
 }
+/* tablet fix?? */
+@media screen and (min-width : 410px) {
+  #die {
+  position: relative;
+  margin: 40px auto 0;
+  height: 400px;
+  width: 400px;
+  transition: transform 1.5s linear;
+  transform-style: preserve-3d;
+}
+#die2 {
+  position: relative;
+  margin: -400px auto 0;
+  height: 400px;
+  width: 400px;
+  transition: transform 1.5s linear;
+  transform-style: preserve-3d;
+  display: none;
+
+}
+#die3 {
+  position: relative;
+  margin: -400px auto 0;
+  height: 400px;
+  width: 400px;
+  transition: transform 1.5s linear;
+  transform-style: preserve-3d;
+  display: none;          
+}
+}
+
 .sf {
   position: absolute;
   height: 62px;
@@ -155,3 +185,28 @@ perspective-origin: 50% 200px;
   transform: rotateX(-90deg) rotate(180deg) translateZ(30px);
 }
 
+.rollResult {
+  float: left;
+  margin: 0;
+  height: 35px;
+  text-align: center;
+  background-color: #a43820 ;
+  color: white;
+  border: 2px solid #e67e22;
+  width: 25%;
+}
+
+.rollResultSpan {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 35px;
+}
+
+.rollTotal {
+  color: white;
+  background-color: #a43820 ;
+  border: 2px solid #e67e22;
+  margin: 0;
+  height: 35px;
+  text-align: center;
+}

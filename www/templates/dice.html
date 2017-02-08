@@ -5,8 +5,20 @@
     </ion-nav-bar>
     <ion-content id="dice" scroll="true">
  
-             <button class="btn orange" id="addDie1" type="button"><span>Add second die</span></button>
-             <button class="btn red" id="addDie2" type="button"><span>Add third die</span></button>    
+             <button class="btn orange" id="addDie1" type="button" ng-click="addDie1()" ng-init="add1 = true"><span>{{btnText1}}</span></button>
+             <button class="btn red" id="addDie2" type="button" ng-click="addDie2()" ng-init="add2 = true"><span>{{btnText2}}</span></button>    
+             <div class="rollResult ng-hide" ng-show="die1Result">
+                 <span ng-bind="die1Result" class="rollResultSpan"></span>
+             </div>
+              <div class="rollResult ng-hide" ng-show="die2Result">
+                 <span ng-bind="die2Result" class="rollResultSpan"></span>
+             </div>
+              <div class="rollResult ng-hide" ng-show="die3Result">
+                 <span ng-bind="die3Result" class="rollResultSpan"></span>
+             </div>
+             <div class="rollResult ng-hide" ng-show="die1Result">
+                 <span ng-bind="rollTotal" class="rollResultSpan"></span>
+             </div>
         <section id="roll-wrap">
 <div id="die" style="transform: rotateX(0deg) rotateY(0deg);">
     <div class="sf f1">1</div>
@@ -33,6 +45,7 @@
     <div class="sf f6">6</div>
 </div>
 </section>
-<button class="btn orange" id="roll" type="button"><span>Roll it</span></button>
+<button class="btn orange" id="roll" type="button" ng-click="rollDice()"><span>{{btnText3}}</span></button>
+
     </ion-content>
 </ion-view>

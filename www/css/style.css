@@ -35,14 +35,86 @@ TOP HEADER
 .bar-stable .button.button-clear {
     color: white;
 }
+/*
+NAVIGATION PAGE
+*/
+
+ion-wheel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+#ionic-wheel {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+#ionic-wheel .circle.active {
+  top: calc(50% - 25px) !important;
+  left: calc(50% - 25px) !important;
+  opacity: 0;
+  transition-property: opacity, left, top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 9;
+}
+
+#ionic-wheel .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #B2542D;
+  box-shadow: 0px 2px 0px #69311A;
+  box-sizing: border-box;
+  border-radius: 50%;
+  opacity: 1;
+  transition-property: opacity, left, top;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+#ionic-wheel #activate {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #B2542D;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+#ionic-wheel .circle i, #ionic-wheel #activate i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+}
+
+.background-peach {
+  background-color: #FF9C73;
+}
+
 
 /*
 DICE 
 */
 #dice {
-    background: url("../img/dice_bg.jpg") no-repeat;  
-    background-position: center; 
-    background-size: cover;
+    background: #FF9C73;
 }
 #roll-wrap {
 perspective: 800;
@@ -210,3 +282,168 @@ perspective-origin: 50% 200px;
   height: 35px;
   text-align: center;
 }
+
+/*
+TIMER
+*/
+.timerInput {
+  background-color: #a43820!important;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+  padding: 15px 15px 15px 15px ! important;
+  height: 70px !important;
+  border-radius: 6px;
+  width: 50%
+}
+.timerInput::-webkit-input-placeholder, .timerInput {
+   color: white !important;
+   font-size: 40px !important;
+}
+/* FIX FOR SLOW ANGULAR NG-HIDE */
+.ng-hide.ng-hide-animate{
+     display: none !important;
+}
+#timer {
+  background: #FF9C73;
+}
+.card {
+  border-radius: 6px;
+  box-shadow: 0 0 30px 0 black;
+  margin: 0 auto;
+  margin-top: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 375px;
+  min-height: 640px;
+  max-height: 100%;
+  background-color: #a43820;
+  overflow: hidden;
+}
+.card__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  color: white;
+}
+.card__counter__num {
+  margin-bottom: 250px;
+  font-size: 150px;
+  padding: 0 20px;
+  z-index: 15;
+}
+.card__counter span {
+  margin-top: 45px;
+  font-size: 65px;
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  z-index: 3;
+}
+.card .card__button {
+  position: absolute;
+  bottom: 200px;
+  left: calc(50% - 37.5px);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #e67e22;
+  cursor: pointer;
+  z-index: 10;
+}
+.card .card__button.card__button--triggered {
+  -webkit-animation: button 10s linear;
+          animation: button 10s linear;
+}
+.card .card__button.card__button--triggered ~ .card__counter span {
+  opacity: 0;
+}
+.card .card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+@-webkit-keyframes button {
+  4.9% {
+    bottom: -250px;
+    left: calc(50% - 500px);
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+  }
+  5.1% {
+    bottom: 0;
+    left: calc(50% - 187.5px);
+    width: 375px;
+    height: 667px;
+    border-radius: 0;
+  }
+  100% {
+    bottom: 0;
+    left: calc(50% - 187.5px);
+    width: 375px;
+    height: 0;
+    border-radius: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  4.9% {
+    bottom: -250px;
+    left: calc(50% - 500px);
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+  }
+  5.1% {
+    bottom: 0;
+    left: calc(50% - 187.5px);
+    width: 375px;
+    height: 667px;
+    border-radius: 0;
+  }
+  100% {
+    bottom: 0;
+    left: calc(50% - 187.5px);
+    width: 375px;
+    height: 0;
+    border-radius: 0;
+    opacity: 1;
+  }
+}
+
+/*
+CIRKEL ANIMATION 
+
+@keyframes button {
+  0% {
+    bottom: 0;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+  } 
+}
+
+@-webkit-keyframes button {
+0% {
+    bottom: 0;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+  }
+  }
+*/

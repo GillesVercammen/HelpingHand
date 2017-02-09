@@ -21,9 +21,6 @@ angular.module('starter.controllers', [])
   };
 
 })
-
-
-
 .controller('DiceCtrl', function ($rootScope, $scope, $localStorage) {
     //diepresent is checking if button is clicked, needed for generating random or not
     $scope.btnText1 = "Add second die";
@@ -390,6 +387,39 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('TimerCtrl', function () {
+.controller('TimerCtrl', function ($scope) {
+    button = $('.card__button');
+    $scope.debug = function(){
+      console.log($scope.counterInput)
+    }
+    button.on('click', function clicked() {
+          $(this).addClass('card__button--triggered');
+
+          $(this).off('click', clicked);
+
+          var count = 10;
+          var counter = setInterval(timer, 1000);
+
+          function timer() {
+            count -= 1;
+            if (count === -1) {
+              clearInterval(counter);
+
+              setTimeout(function () {
+                count = 100;
+                document.getElementById("num").innerHTML = count;
+
+                button.removeClass('card__button--triggered');
+                button.on('click', clicked);
+
+              }, 100);
+
+              return;
+            }
+            document.getElementById("num").innerHTML = count;
+          }
+
+	
+});
 
 });

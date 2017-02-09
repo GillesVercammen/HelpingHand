@@ -1,9 +1,25 @@
 <ion-view view-title="timer" id="timer">
-    <ion-nav-bar class="bar-stable">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
-    </ion-nav-bar>
-  <ion-content id="timer" scroll="true">
-  timer
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content id="timer" scroll="false" >
+      <input type="text" name="counter" placeholder="Seconds" class="timerInput" ng-model="counterInput" >
+       <button type="" ng-click="debug()">debug</button>
+    <div class="card">
+        
+      <div class="card__overlay"></div>
+      
+      <div class="card__button"></div>
+      
+      <div class="card__counter">
+        
+        <div id="num" class="card__counter__num">
+          <span ng-hide="counterInput" class="ng-hide">0</span>{{counterInput}}
+        </div>
+
+       
+      </div>
+    </div>
   </ion-content>
 </ion-view>
